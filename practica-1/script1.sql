@@ -110,14 +110,15 @@ grant select on elecciones.VOTO to guest1;
 create view guest1.VOTOSPRESIDENTE as
 select 
 d.nombre_depto as Departamento, 
-m.codigo_muni as Municipio, 
-p.nombre_part as Partido , sum(a.votos_validos_emitidos) as "No. Votos"
+m.nombre_muni as Municipio, 
+p.nombre_part as Partido ,
+sum(v.voto_cantidad) as "No. Votos"
 from elecciones.voto v
-inner join elecciones.acta a on a.numero_mesa = v.voto_mesa and a.tipo_eleccion = v.voto_eleccion
+inner join elecciones.acta a on a.numero_mesa = v.voto_mesa and a.tipo_eleccion = v.voto_eleccion and a.tipo_eleccion = 1
 inner join elecciones.municipio m on m.codigo_muni = a.municipio and m.depto_muni = a.departamento
 inner join elecciones.departamento d on d.codigo_depto = m.depto_muni
 inner join elecciones.partido p on p.codigo_part = v.voto_partido
-group by d.nombre_depto, m.codigo_muni, p.nombre_part
+group by d.nombre_depto, m.nombre_muni, p.nombre_part
 order by 1,2,3
 ;
 
