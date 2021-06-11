@@ -1,0 +1,27 @@
+;;; 
+Export: Release 11.2.0.2.0 - Production on Thu Jun 10 19:30:06 2021
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+Starting "SYSTEM"."SYS_EXPORT_SCHEMA_01":  system/******** schemas=backup directory=dump_dir dumpfile=backup_full.dmp 
+Estimate in progress using BLOCKS method...
+Processing object type SCHEMA_EXPORT/TABLE/TABLE_DATA
+Total estimation using BLOCKS method: 320 KB
+Processing object type SCHEMA_EXPORT/USER
+Processing object type SCHEMA_EXPORT/SYSTEM_GRANT
+Processing object type SCHEMA_EXPORT/DEFAULT_ROLE
+Processing object type SCHEMA_EXPORT/TABLESPACE_QUOTA
+Processing object type SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+Processing object type SCHEMA_EXPORT/TABLE/TABLE
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+. . exported "BACKUP"."EQUIPO"                           6.945 KB       5 rows
+. . exported "BACKUP"."JORNADA"                          5.984 KB      11 rows
+. . exported "BACKUP"."JUGADOR"                          21.10 KB      48 rows
+. . exported "BACKUP"."LIGA"                             6.492 KB       1 rows
+. . exported "BACKUP"."PARTIDO"                          8.140 KB      22 rows
+Master table "SYSTEM"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for SYSTEM.SYS_EXPORT_SCHEMA_01 is:
+  C:\USERS\CE2\DOWNLOADS\BASES2-LAB\PRACTICA-1\PARTE2\SYSTEM_PUMP\BACKUP_FULL.DMP
+Job "SYSTEM"."SYS_EXPORT_SCHEMA_01" successfully completed at 19:30:29
