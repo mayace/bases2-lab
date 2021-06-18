@@ -1,0 +1,40 @@
+{
+    "nombre": "Equipo 1",
+    "jugadores_id": []
+}
+
+{
+    "nombre": "Jugador 1",
+    "goles": 0
+}
+
+{
+    "fecha": "yyyy-mm-dd",
+    "goles_local": 0,
+    "goles_visita": 0,
+    "equipos_id": []
+}
+
+{
+    "nombre": "Liga 1",
+    "fecha_inicio": "yyyy-mm-dd",
+    "fecha_fin": "yyyy-mm-dd",
+    "jornadas": [
+        {
+            "numero": 1,
+            "partidos_id": []
+        }
+    ],
+    "equipos": [
+        {
+            "equipo_id": 0,
+            "tabla": {
+                "posicion": 1,
+                "goles_favor": 0,
+                "goles_contra": 0,
+                "partidos_ganados": 0,
+                "partidos_perdidos": 0
+            }
+        }
+    ]
+}
