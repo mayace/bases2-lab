@@ -8,7 +8,7 @@ class Movie(Document):
     title = StringField()
     imdb_rating = FloatField()
     year = IntField()
-    # episodes = ListField(StringField(), default=list) # solo total
+    episodes = ListField(StringField(), default=list) # solo total
 
     created_at = DateTimeField()
     # genres = ListField(StringField(), default=list) # solo total

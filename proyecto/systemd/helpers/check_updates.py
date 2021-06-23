@@ -10,18 +10,15 @@ class Handler():
     def create_sqlserver_connection(self):
         return pyodbc.connect(self.sql_connection_str)
 
-    def get_updates(self, from)->list :
+    def get_updates(self, last_update) -> list:
         conn = self.create_sqlserver_connection()
-        cursor = conn.Cursor()
+        cursor = conn.cursor()
+        l = list()
 
-        for row in cursor.execute("execute "):
-            print(row.user_id, row.user_name)
-        return []
+        for item in cursor.execute("execute get_updates ?;", last_update):
+            l.append(Movie(title=item.title, imdb_rating=item.imdb_rating,
+                     netflix_id=item.netflix_id, year=item.year, created_at=item.created_at).save())
+        return l
 
-    
-
-    def execute(self, last_update = None):
-        updates = self.get_updates(last_update)
-
-        for item in updates:
-
+    def execute(self, last_update=None) -> list:
+        return self.get_updates(last_update)
