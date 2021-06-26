@@ -22,6 +22,5 @@ def check_updates():
 @app.route("/")
 def index():
     movies = []
-    print(app.config.get("MONGODB"))
     movies = Movie.objects.all().order_by("-created_at")
     return render_template("index.html", movies=movies)
