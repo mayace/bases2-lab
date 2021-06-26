@@ -1,0 +1,6 @@
+[Unit]
+Description=Aplicacion web flask con  mongodb y sqlserver, bases de datos 2
+
+[Service]
+ExecStart=/home/osboxes/repos/bases2-lab/proyecto/systemd/.venv/bin/flask  run --host 0.0.0.0
+Environment=PYTHONUNBUFFERED=1

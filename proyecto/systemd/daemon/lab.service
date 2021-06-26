@@ -1,6 +1,6 @@
 [Unit]
-Description=bruh
+Description=Deamon de bases de datos 2
 
 [Service]
-ExecStart=/usr/bin/python3  /root/lab-project/daemon.py
+ExecStart=/home/osboxes/repos/bases2-lab/proyecto/systemd/.venv/bin/python  /home/osboxes/repos/bases2-lab/proyecto/systemd/daemon/daemon.py
 Environment=PYTHONUNBUFFERED=1
