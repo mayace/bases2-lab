@@ -16,5 +16,5 @@ MONGODB_SETTINGS = {
     "db": MONGO_DB, "host": MONGO_HOST, "port": int(MONGO_PORT),
 }
 
-SQLS_CONN_STR = "Driver={};Server={};Database={};UID={};PWD={};".format(SQLS_DRIVER,
+SQLS_CONN_STR = "Driver={{{}}};Server={};Database={};UID={};PWD={};".format(SQLS_DRIVER,
                                                                         SQLS_HOST, SQLS_DB, SQLS_USER, SQLS_PASS,)
