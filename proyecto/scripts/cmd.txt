@@ -1,0 +1,7 @@
+sudo systemctl daemon-reload
+sudo systemctl restart flask
+sudo systemctl status flask
+
+sudo systemctl list-dependencies lab.target
+sudo systemctl list-units --type=service
+tail -f /var/log/syslog
