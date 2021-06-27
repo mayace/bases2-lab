@@ -1,0 +1,19 @@
+{% extends 'layout/base.html' %} {% block content %}
+<h3 class="mt-5">{{movie.genres | length }} Generos(s)</h3>
+
+<table class="table table-striped table-sm">
+<thead>
+    <tr>
+        <th>Nombre</th>
+    </tr>
+</thead>
+  <tbody>
+    {% for item in movie.genres %}
+    <tr>
+      <td>{{ item.name }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

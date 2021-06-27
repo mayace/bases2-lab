@@ -39,9 +39,9 @@ def movies(update_id=None):
 @app.route("/genres/<movie_id>/")
 def movie_genres(movie_id=None):
     movie = Movie.objects.get(id=movie_id)
-    return str(movie.id)
+    return render_template("genres.html", movie=movie)
 
 @app.route("/episodes/<movie_id>/")
 def movie_episodes(movie_id=None):
     movie = Movie.objects.get(id=movie_id)
-    return str(movie.id)
+    return render_template("episodes.html", movie=movie)

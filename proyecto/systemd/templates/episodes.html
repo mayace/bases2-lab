@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %} {% block content %}
+<h3 class="mt-5">{{movie.episodes | length }} Episodio(s)</h3>
+
+<table class="table table-striped table-sm">
+<thead>
+    <tr>
+        <th>Número</th>
+        <th>Nombre</th>
+    </tr>
+</thead>
+  <tbody>
+    {% for item in movie.episodes %}
+    <tr>
+      <td>{{ item.number }}</td>
+      <td>{{ item.name }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
