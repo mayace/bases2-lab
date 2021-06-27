@@ -30,10 +30,9 @@ class Handler():
 
     def get_episodes_query(self) -> str:
         return """
-        select g.id, g.name
-        from TitleGenre tg
-        left join Genre g on g.id = tg.genreId
-        where titleId = ?
+        select e.id, e.episode, e.season
+        from Episode e
+        where e.titleId = ?
         """
 
     def append_genres(self, conn, movie: Movie):
@@ -51,8 +50,8 @@ class Handler():
         query = self.get_episodes_query()
         for item in cursor.execute(query, movie.netflix_id):
             doc = Episode()
-            doc.name = getattr(item, "name", None)
-            doc.number = getattr(item, "number", None)
+            doc.name = getattr(item, "episode", None)
+            doc.number = getattr(item, "episode", None)
             movie.episodes.append(doc)
 
     def get_updates(self, last_update) -> list:
